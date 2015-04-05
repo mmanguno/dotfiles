@@ -1,0 +1,85 @@
+# Sets the tabsize to 4, as well as changes the tabs to spaces
+set tabsize 4
+set tabstospaces
+
+# Get line numbering
+set const
+
+# The following comes from http://www.linuxhowtos.org/System/config_nano.htm
+# Use auto-indentation 
+set autoindent 
+ 
+# Backup files to filename~ 
+#set backup 
+ 
+# Use cut to end of line with ^K by default 
+#set cut 
+ 
+# Enable ~/.nano_history for saving and reading search/replace strings. 
+# set historylog 
+ 
+# Don't convert files from DOS/Mac format 
+set noconvert 
+ 
+# Don't follow symlinks when writing files 
+# set nofollow 
+ 
+# Don't display the help lists at the bottom of the screen 
+# set nohelp 
+ 
+# Don't wrap text at all 
+# You have to do this, or else nano will insert newlines all over the place
+set nowrap 
+ 
+# Use smooth scrolling as the default 
+set smooth 
+ 
+# Use this spelling checker instead of the internal one.  This option 
+# does not properly have a default value. 
+set speller "aspell -c" 
+ 
+# Allow nano to be suspended with ^Z 
+# set suspend 
+ 
+# Use this tab size instead of the default; it must be greater than 0 
+# set tabsize 8 
+ 
+# Save automatically on exit, don't prompt 
+# set tempfile 
+ 
+# Enable ~/.nano_history for saving and reading search/replace strings. 
+# set historylog 
+ 
+# Disallow file modification, why would you want this in an rc file? ;) 
+# set view 
+
+# Include syntax files for all these programming languages
+include "/usr/local/share/nano/asm.nanorc"
+include "/usr/local/share/nano/awk.nanorc"
+include "/usr/local/share/nano/c.nanorc"
+include "/usr/local/share/nano/cmake.nanorc"
+include "/usr/local/share/nano/css.nanorc"
+include "/usr/local/share/nano/debian.nanorc"
+include "/usr/local/share/nano/fortran.nanorc"
+include "/usr/local/share/nano/gentoo.nanorc"
+include "/usr/local/share/nano/groff.nanorc"
+include "/usr/local/share/nano/html.nanorc"
+include "/usr/local/share/nano/java.nanorc"
+include "/usr/local/share/nano/makefile.nanorc"
+include "/usr/local/share/nano/man.nanorc"
+include "/usr/local/share/nano/mgp.nanorc"
+include "/usr/local/share/nano/mutt.nanorc"
+include "/usr/local/share/nano/nanorc.nanorc"
+include "/usr/local/share/nano/objc.nanorc"
+include "/usr/local/share/nano/ocaml.nanorc"
+include "/usr/local/share/nano/patch.nanorc"
+include "/usr/local/share/nano/perl.nanorc"
+include "/usr/local/share/nano/php.nanorc"
+include "/usr/local/share/nano/pov.nanorc"
+include "/usr/local/share/nano/python.nanorc"
+include "/usr/local/share/nano/ruby.nanorc"
+include "~/.nano/scala.nanorc"
+include "/usr/local/share/nano/sh.nanorc"
+include "/usr/local/share/nano/tcl.nanorc"
+include "/usr/local/share/nano/tex.nanorc"
+include "/usr/local/share/nano/xml.nanorc"
