@@ -63,6 +63,9 @@ highlight ColorColumn ctermbg=52
 "Used for Pathogen
 execute pathogen#infect()
 
+" Remove trailing whitespace on :write for some file types.
+" autocmd FileType cabal, haskell, rust, scala, toml, c, css, git, haml, java, lisp, javascript, markdown, perl, perl6, python, ruby, sass, scheme, sshconfig, vim, yaml, zsh autocmd BufWritePre <buffer> :%s/\s\+$//e
+
 "" This is for a status bar
 "Heres one from 'jamessan', from http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
 "set statusline=   " clear the statusline for when vimrc is reloaded

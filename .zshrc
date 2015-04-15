@@ -16,9 +16,6 @@ alias lisp='rlwrap sbcl'
 # Start up the Haskell GHCi
 alias haskell='ghci'
 
-# Try to have emacs recongize the right color themes
-TERM=xterm-256color
-
 # We're no strangers to love
 alias rickroll='wget -q -O - https://raw.github.com/keroserene/rickrollrc/master/roll.sh | bash'
 
@@ -48,6 +45,12 @@ alias jdk7='/usr/libexec/java_home -v 1.7.0_67 --exec'
 
 # Get to the 1332 TA folder quickly
 alias ta='cd /Users/mitchell/Google\ Drive/Work/GaTech/2015\ Spring\ Semester/CS-1332'
+
+# Get to the spring semester 2015 folder quickly
+alias spring='cd /Users/mitchell/Google\ Drive/Work/GaTech/2015\ Spring\ Semester'
+
+# Get to the fall semester 2014 folder quickly
+alias fall='cd /Users/mitchell/Google\ Drive/Work/GaTech/2014\ Fall\ Semester'
 
 # Alias qutebrowser to qute
 alias qute='qutebrowser'

@@ -1,6 +1,9 @@
 # Use the latest version of vim
 alias vim='/usr/local/Cellar/vim/7.4.488/bin/vim'
 
+# Use the latest version of emacs
+alias emacs='/usr/local/Cellar/emacs/24.4/bin/emacs'
+
 # Start ed in command mode
 alias ed='ed -p:'
 
@@ -9,10 +12,6 @@ alias lisp='rlwrap sbcl'
 
 # Start up the Haskell GHCi
 alias haskell='ghci'
-
-# Try to have emacs recongize the right color themes 
-export TERM=xterm-256color
-
 
 # We're no strangers to love
 alias rickroll='wget -q -O - https://raw.github.com/keroserene/rickrollrc/master/roll.sh | bash'
@@ -54,10 +53,10 @@ alias fall='cd /Users/mitchell/Google\ Drive/Work/GaTech/2014\ Fall\ Semester'
 alias qute='qutebrowser'
 
 # configure the PS1
-PS1='\[\033[01;32m\]\u@Yosemite:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1='\[\033[1;37m\]\u@Yosemite:\[\033[01;37m\]\w\[\033[00m\]\n\$ '
 
 # PATH variable
-export PATH=$PATH:/Users/mitchell/.tongues/scala-2.11.1/bin
+export PATH=$PATH:/Users/mitchell/.tongues/scala-2.11.1/bin:/Users/mitchell/.tongues/gradle-2.2.1/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$HOME/bin
 
 # Setting PATH for Python 3.4
 # The orginal version is saved in .bash_profile.pysave
