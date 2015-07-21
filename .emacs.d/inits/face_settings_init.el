@@ -19,5 +19,5 @@
       (set-face-attribute 'default t :font "Monaco-12")
       (setq ring-bell-function 'ignore)
       (set-default 'cursor-type 'bar)
-      (load-theme 'monokai t))
-    (load-theme 'monokai t)) ;else, configure console mode
+      (load-theme 'moe-dark t))
+    (load-theme 'moe-dark t)) ;else, configure console mode
