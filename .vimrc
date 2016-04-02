@@ -18,7 +18,7 @@ set ignorecase		"When doing a search, ignore the case of letters
 set smartcase		"Override the ignorecase option if the search pattern contains upper case letters
 "Clear the search highlight by pressing ENTER when in Normal mode (Typing commands)
 :nnoremap <CR> :nohlsearch<CR>/<BS><CR>
-
+     
 "-- Tabbed Editing --
 "Open a new (empty) tab by pressing CTRL-T. Prompts for name of file to edit
 map <C-T> :tabnew<CR>:edit
@@ -26,6 +26,9 @@ map <C-T> :tabnew<CR>:edit
 map <C-O> :tabfind
 "Switch between tabs by pressing Shift-Tab
 map <S-Tab> gt
+"Move backups out of the current directory and into a .backup directory
+set backupdir-=.
+set backupdir^=/tmp/
 
 "-- Tweaks --
 "Add tweak for better backspace support
@@ -33,31 +36,43 @@ set backspace=indent,eol,start
 "filetype plugin indent on  "Turns on file-dependent indentation
 syntax on
 
-"------------------"
-"<><><><><><><><><>"
-"------------------"
-"For Writing"
-function ForWriting()
+function Typewriter()
     set background=dark
     colorscheme proton
     highlight Colorcolumn guibg=black
     set colorcolumn=
-    set guifont=Source\ Code\ Pro:h14
+    set guifont=CMU\ Typewriter\ Text\ Regular:h14
     set wrap
     set nonumber
     set linebreak
     set nolist
     set textwidth=0
     set wrapmargin=0
-    set lines=36 columns=88
+    set lines=36 columns=93
 endfunction
-""""""""""""
-command PerfectFromNowOn call ForWriting()
+command Typewriter call Typewriter()
+
+function Wordstar()
+    set background=dark
+    colorscheme matrix
+    highlight Colorcolumn guibg=black
+    set colorcolumn=
+    set guifont=Terminus\ (TTF):h16
+    set wrap
+    set nonumber
+    set linebreak
+    set nolist
+    set textwidth=0
+    set wrapmargin=0
+    set lines=36 columns=93
+endfunction
+command Wordstar call Wordstar()
+
 
 "let g:solarized_termcolors=256 "Downgrades colors for solarized
-set background=dark
-colorscheme Benokai
-set colorcolumn=81
+"set background=dark
+colorscheme 256-grayvim
+set colorcolumn=80
 highlight ColorColumn ctermbg=52
 
 "Used for Pathogen

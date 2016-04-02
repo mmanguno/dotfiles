@@ -42,7 +42,7 @@ set speller "aspell -c"
 # set suspend 
  
 # Use this tab size instead of the default; it must be greater than 0 
-# set tabsize 8 
+# set tabsize 4 
  
 # Save automatically on exit, don't prompt 
 # set tempfile 
@@ -83,3 +83,4 @@ include "/usr/local/share/nano/sh.nanorc"
 include "/usr/local/share/nano/tcl.nanorc"
 include "/usr/local/share/nano/tex.nanorc"
 include "/usr/local/share/nano/xml.nanorc"
+

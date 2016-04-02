@@ -13,11 +13,16 @@
     (progn ; configure graphical mode
       (tool-bar-mode -1)
       (scroll-bar-mode -1)
-      (add-to-list 'default-frame-alist '(height . 35))
+      (add-to-list 'default-frame-alist '(height . 40))
       (add-to-list 'default-frame-alist '(width . 85))
-      (add-to-list 'default-frame-alist '(font . "Monaco-12"))
-      (set-face-attribute 'default t :font "Monaco-12")
+      (add-to-list 'default-frame-alist '(font . "Monaco-9"))
+      (set-face-attribute 'default t :font "Monaco-9")
       (setq ring-bell-function 'ignore)
       (set-default 'cursor-type 'bar)
-      (load-theme 'moe-dark t))
-    (load-theme 'moe-dark t)) ;else, configure console mode
+      (load-theme 'monokai t)
+      (set-frame-parameter nil 'background-mode 'dark))
+  ;(customize-set-variable 'solarized-termcolors 16)
+  (load-theme 'moe-dark t)) ;; else, configure console mode
+  ;(set-frame-parameter nil 'background-mode 'dark)
+  ;(set-terminal-parameter nil 'background-mode 'dark)
+  ;(enable-theme 'solarized)) ;; solarized only: start in dark mode
