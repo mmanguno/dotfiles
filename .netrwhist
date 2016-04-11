@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/mitchell/Code/GitHub/Shopping-with-Friends/app/src/main/java/am/te/myapplication'
+let g:netrw_dirhist_2='/Users/mitchell/Code/Scala/Tutorial/HelloWorld'
+let g:netrw_dirhist_3='/Users/mitchell/.zprezto'
+let g:netrw_dirhist_4='/Users/mitchell/.emacs.d/emacs-color-theme-solarized'
+let g:netrw_dirhist_5='/Users/mitchell/.zprezto'
