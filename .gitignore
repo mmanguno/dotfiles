@@ -1,0 +1,2 @@
+# Don't track the bundle; manually install Vundle and let it do the rest
+.vim/bundle
