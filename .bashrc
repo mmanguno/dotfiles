@@ -48,7 +48,8 @@ alias irc='irssi'
 alias jdk7='/usr/libexec/java_home -v 1.7.0_67 --exec'
 
 # configure the PS1
-export PS1="\[$(tput bold)\]\[$(tput setaf 2)\](\$PWD)\n\[$(tput setaf 4)\]> \[$(tput sgr0)\]"
+export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]($PWD)\n\[$(tput setaf 4)\]\
+> \[$(tput sgr0)\]"
 
 # PATH variable
 export PATH=$PATH:/Users/mitchell/.tongues/scala-2.11.1/bin:/Users/mitchell/.tongues/gradle-2.2.1/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$HOME/bin:$HOME/.scripts
