@@ -48,7 +48,7 @@ alias irc='irssi'
 alias jdk7='/usr/libexec/java_home -v 1.7.0_67 --exec'
 
 # configure the PS1
-export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]($PWD)\n\[$(tput setaf 4)\]\
+export PS1="\[$(tput bold)\]\[$(tput setaf 2)\](\$PWD)\n\[$(tput setaf 4)\]\
 > \[$(tput sgr0)\]"
 
 # PATH variable
