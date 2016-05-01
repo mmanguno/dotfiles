@@ -68,22 +68,22 @@ set backspace=indent,eol,start
 "filetype plugin indent on  "Turns on file-dependent indentation
 syntax on
 
-"let g:solarized_termcolors=256 "Downgrades colors for solarized
-"set background=dark
-colorscheme 256-grayvim
-"set colorcolumn=80
-"highlight ColorColumn ctermbg=52
-set textwidth=79
-
-"call lengthmatters#highlight('ctermbg=52 ctermfg=52')
-
-"Used for Pathogen
-"execute pathogen#infect()
+colorscheme Revolution
+set cursorline
 
 "Vundle plugins
 Plugin 'whatyouhide/vim-lengthmatters'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'Yggdroot/indentLine'
+
+"vim-better-whitespace: clear whitespace on save
+" let g:strip_whitespace_on_save=1
 
 "vim-lengthmatters: highlighting past a character
-set textwidth=79
+set textwidth=0                        " Make sure this is off (else issues)
+let g:lengthmatters_use_textwidth=0    " textwidth causes weird wrapping issues
+let g:lengthmatters_start_at_column=80 " start at column 80
 call lengthmatters#highlight('ctermbg=124 ctermfg=255')
+
+"indentLine: show indents visually
+let g:indentLine_color_term=239
