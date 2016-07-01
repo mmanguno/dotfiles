@@ -1,0 +1,47 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use Getopt::Long qw(GetOptions);
+
+use constant URL => 'https://github.com/mmanguno/dotfiles.git';
+=pod
+
+=head1 NAME
+
+install - install the dotfiles in a user's home directory
+
+=head1 SYNOPSIS
+
+install [--mac] [-d directory]
+
+=head1 DESCRIPTION
+
+=cut
+
+# First, get the command line args
+my $isMac = 0;  # Initialise to non-mac specific.
+my $dir = $ENV{"HOME"};  # Initialise to $HOME (won't work on Powershell/cmd)
+GetOptions(
+    'mac' => \$isMac,
+    'd=s' => \$dir
+) or die "Usage: $0 --mac\n";
+
+# Then, confirm that the directory we're installing to exists
+die "Directory '$dir' does not exist. Exiting..." unless -d $dir;
+
+my $repoDir = $dir . '/.dotfiles';
+
+# Make the call to git clone, downloading the repository to the specified dir
+my $cmd = 'git clone ' . URL . ' ' . $repoDir;
+system($cmd);
+
+# Symlink the files into the dir, so updates are carried across 'pulls'
+opendir(my $dir_handle, $repoDir) or die "Couldn't open repo dir for reading.";
+my @dotfiles = readdir $dir_handle;
+closeddir $dir_handle;
+
+foreach $file (@dotfiles){
+    symLink "$dir/$file", "$repoDir/$file";
+}
+
+exit 0;
