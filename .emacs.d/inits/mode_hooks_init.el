@@ -23,11 +23,11 @@
 ;(setq-default python-indent-offset 4)
 
 ;; For Ruby
-(setq ruby-indent-level 4)
+(setq ruby-indent-level 2)
 
 ;; For Scala
-(unless (package-installed-p 'scala-mode2)
-  (package-refresh-contents) (package-install 'scala-mode2))
+;(unless (package-installed-p 'scala-mode2)
+;  (package-refresh-contents) (package-install 'scala-mode2))
 
 ;; For assembly
 (require 'asm-mode)
