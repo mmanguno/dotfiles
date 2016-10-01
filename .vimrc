@@ -69,12 +69,12 @@ set backspace=indent,eol,start
 syntax on
 
 colorscheme Revolution
-set cursorline
 
 "Vundle plugins
 Plugin 'whatyouhide/vim-lengthmatters'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Yggdroot/indentLine'
+Plugin 'rust-lang/rust.vim'
 
 "vim-better-whitespace: clear whitespace on save
 " let g:strip_whitespace_on_save=1
@@ -87,3 +87,16 @@ call lengthmatters#highlight('ctermbg=124 ctermfg=255')
 
 "indentLine: show indents visually
 let g:indentLine_color_term=239
+
+"Ruby: indent only two spaces
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+
+"Rust: for some reason, Vundle's not correctly picking up rust files.
+"see https://github.com/rust-lang/rust.vim/issues/46
+autocmd BufNewFile,BufRead *.rs set filetype=rust
+
+"LaTeX: tell Vim to use the standard LaTeX highlighting for .tex files
+let g:tex_flavor = "latex"
+
+"Make sure indentLine doesn't conceal when in insert mode
+let g:indentLine_concealcursor = 'nc'
